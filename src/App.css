@@ -46,10 +46,8 @@
 
   }
   .submitButton{
-    position: absolute;
-    right:    50%;
-    bottom:   5%;
     font-size: large;
+    margin-right: 10px;
 
   }
   .user{
@@ -64,8 +62,6 @@
     background: lightcoral;
     border-radius: 20px ;
     margin: 10px;
- 
-    
   }
   form{
     position: absolute;
@@ -75,13 +71,14 @@
   }
   form > input{
     background: lightgray;
+    margin-left:10px;
   }
   form > button{
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px;
     cursor: pointer;
 
   }
