@@ -32,6 +32,14 @@
     color: black;
     
   }
+  .userName{
+    font-size: large;
+    font-weight: bold;
+
+  }
+  .summary{
+    font-size: medium;
+  }
   .messagesDiv{
       float:right;
       width: 80%;
@@ -40,7 +48,8 @@
       overflow: auto;
   }
   .contactName{
-      font-weight: bold;
+    font-style: italic;
+    font-weight:bold;
       background:red;
       font-size: x-large;
 
@@ -51,6 +60,7 @@
 
   }
   .user{
+    width: 20%;
     padding: 1%;
     background: lightgreen;
     border-radius: 20px ;
@@ -58,6 +68,7 @@
 
   }
   .other{
+    width: 20%;
     padding: 1%;
     background: lightcoral;
     border-radius: 20px ;
@@ -72,6 +83,7 @@
   form > input{
     background: lightgray;
     margin-left:10px;
+    width: 200px;
   }
   form > button{
     text-align: center;

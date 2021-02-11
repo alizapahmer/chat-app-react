@@ -8,8 +8,8 @@ const Contacts = ({contact, summary,  name, setContactMessages})=>{
 
     return (
         <div className= "contacts" onClick={contactMessageHandler}>
-            <p>{name}</p>
-            <p>{summary}</p>
+            <p className= "userName">{name}</p>
+            <p className= "summary">{summary}</p>
         </div>
 );
 

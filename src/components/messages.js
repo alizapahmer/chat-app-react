@@ -49,8 +49,8 @@ const Messages = ({setInputText,inputText, newMessage, setNewMessage, setContact
                <Texts key={contact.name} messages={contact.messages} /> : ""
           ))}
           </div>
-            <input type="button" value="Send" className="submitButton" onClick={sendDate} />
-        <form>
+          <form>
+            <input type="button" value="Send Date" className="submitButton" onClick={sendDate} />
             <input value={inputText} onChange={inputTextHandler} type="text" />
             <button onClick = {submitMessageHandler}type="submit">Enter</button>
         </form>
