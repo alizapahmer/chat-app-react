@@ -5,6 +5,7 @@ import Messages from './components/messages';
 import './App.css';
 function App(){
   const[newMessage, setNewMessage] = useState(false);
+  const [inputText, setInputText] = useState("");
   const [contactMessages, setContactMessages] = useState({name: "Leanne Graham", messages: [],  sender: "", summary:""})
   const [firstState,setFirstState]=useState(true);
   const [contacts, setContacts]= useState([ 
@@ -44,7 +45,7 @@ return (
       ))}
     </div>
     <div className="messagesDiv">
-    <Messages newMessage={newMessage} setNewMessage= {setNewMessage} contacts={contacts} setContacts={setContacts} contactMessages={contactMessages} />
+    <Messages setInputText={setInputText}inputText = {inputText} newMessage={newMessage} setNewMessage= {setNewMessage} contacts={contacts} setContacts={setContacts} contactMessages={contactMessages} />
     </div>
   </div>
 );

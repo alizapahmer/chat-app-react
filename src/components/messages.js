@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { render } from 'react-dom';
 import Texts from './texts';
-const Messages = ({newMessage, setNewMessage, setContacts, contacts, contactMessages})=>{
+const Messages = ({setInputText,inputText, newMessage, setNewMessage, setContacts, contacts, contactMessages})=>{
     const sendDate=()=>{
            // e.preventDefault();
             const latest= new Date().toLocaleTimeString()
@@ -19,7 +19,27 @@ const Messages = ({newMessage, setNewMessage, setContacts, contacts, contactMess
                 )
           }
     
-          
+          const inputTextHandler = (e)=>{
+            setInputText(e.target.value)
+          }
+
+          const submitMessageHandler = (e)=>{
+            e.preventDefault();
+            if (inputText){setContacts(contacts.map(contact=>{
+                if(contact.name === contactMessages.name){
+                    return {
+                    ...contact, messages: [...contact.messages,[inputText,"user"]], summary: inputText,
+                }
+                
+            }
+            setInputText("")
+            return contact;
+            
+            })
+            )}
+      } 
+        
+
     return (
         <div className="messages">
            <div className= "contactName">{contactMessages.name}</div>
@@ -30,7 +50,12 @@ const Messages = ({newMessage, setNewMessage, setContacts, contacts, contactMess
           ))}
           </div>
             <input type="button" value="Send" className="submitButton" onClick={sendDate} />
+        <form>
+            <input value={inputText} onChange={inputTextHandler} type="text" />
+            <button onClick = {submitMessageHandler}type="submit">Enter</button>
+        </form>
         </div>
+        
 )
 }
 
