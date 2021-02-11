@@ -1,13 +1,15 @@
 # README
 
 Chat App in react 
-  - use can send current time to a contact
-  - automatic contact reply with the same message
+  - user can send current time to a contact and receive an automatic contact reply with the same message
+  - user can send text to a contact
 
 # Features
 
   - send Time to a contact
+  - send text to a contact
   - summary of last message: shows last message under the contact name 
+  - 
 
 
 
