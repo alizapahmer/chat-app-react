@@ -6,6 +6,7 @@ import './App.css';
 function App(){
   const[newMessage, setNewMessage] = useState(false);
   const [contactMessages, setContactMessages] = useState({name: "Leanne Graham", messages: [],  sender: "", summary:""})
+  const [firstState,setFirstState]=useState(true);
   const [contacts, setContacts]= useState([ 
   
   {name: "Leanne Graham", messages: [],  summary:""},
@@ -19,10 +20,9 @@ function App(){
   {name: "Glenna Reichert", messages: [],   summary:""},
   {name: "Clementina DuBuque", messages: [],   summary:""}
 ])
-const [firstState,setFirstState]=useState(true);
+
 useEffect(()=>{
   if (firstState==false){
-    setFirstState(true)
   setTimeout( () =>
   setContacts(contacts.map(contact=>{
   if(contact.name === contactMessages.name){
@@ -33,7 +33,7 @@ useEffect(()=>{
          return contact;
         }))
             ,1000)
-}},[newMessage])
+} setFirstState(false)},[newMessage])
 
 
 return (
