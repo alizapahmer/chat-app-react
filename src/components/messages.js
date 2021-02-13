@@ -4,7 +4,7 @@ import Texts from './texts';
 const Messages = ({setInputText,inputText, newMessage, setNewMessage, setContacts, contacts, contactMessages})=>{
     const sendDate=()=>{
            // e.preventDefault();
-            const latest= new Date().toLocaleTimeString()
+            const latest= new Date().toLocaleTimeString();
             setContacts(contacts.map(contact=>{
                     if(contact.name === contactMessages.name){
                         setNewMessage(!newMessage)

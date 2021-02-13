@@ -9,18 +9,47 @@ function App(){
   const [contactMessages, setContactMessages] = useState({name: "Leanne Graham", messages: [],  sender: "", summary:""})
   const [firstState,setFirstState]=useState(true);
   const [contacts, setContacts]= useState([ 
-  
-  {name: "Leanne Graham", messages: [],  summary:""},
-  {name: "Ervin Howell", messages: [], summary:""},
-  {name: "Clementine Bauch", messages: [], summary:""},
-  {name: "Patricia Lebsack", messages: [],staus :false, summary:""},
-  {name: "Chelsey Dietrich", messages: [], summary:""},
-  {name: "Mrs. Dennis Schulist", messages: [], summary:""},
-  {name: "Kurtis Weissnat", messages: [] , summary:""},
-  {name: "Nicholas Runolfsdottir V", messages: [], summary:""},
-  {name: "Glenna Reichert", messages: [],   summary:""},
-  {name: "Clementina DuBuque", messages: [],   summary:""}
-])
+    {
+      name: "Leanne Graham", 
+    messages: [], 
+     summary:""},
+    {
+      name: "Ervin Howell", 
+    messages: [], 
+    summary:""},
+    
+    {name: "Clementine Bauch",
+     messages: [], 
+     summary:""},
+    {
+      name: "Patricia Lebsack", 
+      messages: [],
+       summary:""},
+    {
+      name: "Chelsey Dietrich",
+       messages: [],
+        summary:""},
+    {
+      name: "Mrs. Dennis Schulist", 
+      messages: [], 
+      summary:""},
+    {
+      name: "Kurtis Weissnat", 
+      messages: [] , 
+      summary:""},
+    {
+      name: "Nicholas Runolfsdottir V",
+       messages: [], 
+       summary:""},
+    {
+      name: "Glenna Reichert", 
+      messages: [],   
+      summary:""},
+    {
+      name: "Clementina DuBuque", 
+      messages: [],
+      summary:""}
+  ])
 
 useEffect(()=>{
   if (firstState==false){
@@ -35,7 +64,6 @@ useEffect(()=>{
         }))
             ,1000)
 } setFirstState(false)},[newMessage])
-
 
 return (
   <div className="app"> 
