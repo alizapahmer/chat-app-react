@@ -3,10 +3,12 @@ import Contacts from './components/contacts';
 import Messages from './components/messages';
 import './App.css';
 import Form from './components/form';
+import Addcontact from './components/addContacts';
 
 function App(){
 
   const [newMessage, setNewMessage] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [inputText, setInputText] = useState("");
   const [contactMessages, setContactMessages] = useState({name: "Leanne Graham", messages: [],  sender: "", summary:""})
   const [firstState,setFirstState]=useState(true);
@@ -67,9 +69,16 @@ function App(){
     } 
   setFirstState(false)},[newMessage])
 
+  const toggleForm=()=>{
+    setToggle(!toggle)
+  }
+
   return (
     <div className="app"> 
-      <div className="msgTitle">Messages</div>
+      <div className={toggle ? "hidden" + "msgTitle" : "msgTitle"}>Messages
+      <button onClick={toggleForm}>{toggle ? "Close" : "Create New Contact"}</button> 
+      </div>
+      <Addcontact toggle= {toggle} contacts={contacts} setContacts={setContacts} />
       <div className= "contactName">{contactMessages.name} </div>
       <div className= "contactDiv"> 
         {contacts.map(contact=>(

@@ -14,5 +14,4 @@ const Contacts = ({contact, summary,  name, setContactMessages})=>{
 );
 
 }
-
 export default Contacts;
