@@ -7,9 +7,9 @@ Chat App in react
 # Features
 
   - send Time to a contact
-  - send text to a contact
-  - summary of last message: shows last message under the contact name 
-  - 
+  - send Text to a contact
+  - Summary of last message: shows last message under the contact name 
+  - Create new contact- form to create a new contact to the contact list 
 
 
 
