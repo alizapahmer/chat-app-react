@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Messages from './messages';
+
 const Contacts = ({contact, summary,  name, setContactMessages})=>{
     
     const contactMessageHandler =()=>{ 
@@ -14,4 +14,5 @@ const Contacts = ({contact, summary,  name, setContactMessages})=>{
 );
 
 }
+
 export default Contacts;
